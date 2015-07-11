@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nimbus">
+<head>
+    <meta charset="utf-8">
+    <title>Nimbus</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div id="sidebar" class="col-sm-3 col-md-2 col-lg-1">
+            <h1>Nimbus</h1>
+        </div>
+        <div class="col-sm-offset-3 col-md-offset-2 col-lg-offset-1" ng-view></div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
