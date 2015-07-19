@@ -1,5 +1,5 @@
 var app = angular.module('nimbus', [
-    'ngRoute', 'onlineControllers', 'gameServices', 'sidebarControllers'
+    'ngRoute', 'onlineControllers', 'gameServices', 'sidebarControllers', 'directives', 'settingsControllers', 'communityControllers', 'libraryControllers'
 ]);
 
 app.config(['$routeProvider',
@@ -16,6 +16,14 @@ app.config(['$routeProvider',
         when('/library', {
             templateUrl: 'partials/library.html',
             controller: 'LibraryCtrl'
+        }).
+        when('/community', {
+            templateUrl: 'partials/community.html',
+            controller: 'CommunityCtrl'
+        }).
+        when('/settings', {
+            templateUrl: 'partials/settings.html',
+            controller: 'SettingsCtrl'
         }).
         otherwise({
             redirectTo: '/online'
