@@ -1,4 +1,6 @@
-#sidebar {
+@sidebar-width: 200px;
+
+body > aside {
     background-color: @darkgrey;
     color: @offwhite;
     position: fixed;
@@ -9,5 +11,92 @@
     display: block;
     overflow-x: hidden;
     overflow-y: auto;
+    width: @sidebar-width;
     border-right: 1px solid lighten(@darkgrey, 50%);
+    
+    footer {
+        position: absolute;
+        display: block;
+        text-align: center;
+        bottom: 20px;
+        width: 100%;
+        color: @midgrey;
+        font-size: 11px;
+    }
+    
+    nav {
+        user-select: none;
+        margin-top: 40px;
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
+            
+        li {
+            
+        
+            padding-left: 20px;
+            margin: 10px 0px;
+            transition: all 0.3s ease-in-out;
+            height: 40px;
+            
+            a {
+                line-height: 40px;
+                
+                .fa {
+                    margin-right: 15px;
+                    font-size: 16px;
+                    transform: translate(0,-2px);
+                }
+                
+                text-decoration: none;
+                
+                font-size: 24px;
+                color: @lightgrey;
+                transform: translate(0,0);
+
+                &.active, &:hover {
+                    color: @offwhite;
+                }
+            }
+            
+            &:nth-child(1) {
+                &:hover, &.active {
+                    background-color: @blue;   
+                }
+            }
+            
+            &:nth-child(2) {
+                &:hover, &.active {
+                    background-color: @red;   
+                }
+            }
+            
+            &:nth-child(3) {
+                &:hover, &.active {
+                    background-color: @green;   
+                }
+            }
+            
+            &:nth-child(4) {
+                &:hover, &.active {
+                    background-color: @purple;   
+                }
+            }
+            
+            &:hover, &.active {
+                                
+                a {
+                    color: @offwhite;
+                }
+                //transform: translate(20px,0);
+            }
+        }
+    }
+}
+
+body > main {
+    margin-left: @sidebar-width + 20px;   
 }

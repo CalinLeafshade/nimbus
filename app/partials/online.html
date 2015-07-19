@@ -1,4 +1,15 @@
 <h2>Games</h2>
 <a class="game-thumb" ng-repeat="game in games" href="#/online/game/{{game.agsid}}">
     <img src="http://placehold.it/320x200" />
+    <p class="game-title">{{ game.name }}</p>
+    <div class="game-info">
+        <header>
+            <h3>{{ game.name }}</h3>
+        </header>
+        <main>
+            {{game.description}}
+        </main>
+        <img class="screenshot" src="http://placehold.it/220x120" />
+        <img class="screenshot" src="http://placehold.it/220x120" />
+    </div>
 </a>

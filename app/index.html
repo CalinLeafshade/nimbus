@@ -13,12 +13,31 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div id="sidebar" class="col-sm-3 col-md-2 col-lg-1">
-            <h1>Nimbus</h1>
-        </div>
-        <div class="col-sm-offset-3 col-md-offset-2 col-lg-offset-1" ng-view></div>
-    </div>
+    <aside>
+        <header>
+            <h1 class="brand">Nimbus<br><small>For AGS</small></h1>
+        </header>
+        <nav ng-controller="NavCtrl">
+            <ul>
+                <li class="active">
+                    <a href="#/online"><i class="fa fa-globe"></i>Online</a>
+                </li>
+                <li>
+                    <a href="#/library"><i class="fa fa-book"></i>Library</a>
+                </li>
+                <li>
+                    <a href="#/community"><i class="fa fa-comments"></i>Community</a>
+                </li>
+                <li>
+                    <a href="#/settings"><i class="fa fa-cogs"></i>Settings</a>
+                </li>
+            </ul>
+        </nav>
+        <footer ng-controller="FooterCtrl">
+            {{ ags.version }}
+        </footer>
+    </aside>
+    <main  ng-view></main>
 </body>
 <script src="app.js"></script>
 </html>

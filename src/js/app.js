@@ -1,6 +1,5 @@
-
 var app = angular.module('nimbus', [
-    'ngRoute', 'onlineControllers', 'gameServices'
+    'ngRoute', 'onlineControllers', 'gameServices', 'sidebarControllers'
 ]);
 
 app.config(['$routeProvider',
